@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-        User.mailer.signup_confirmation(@user).deliver
+        UserMailer.signup_confirmation(@user).deliver
         format.html { redirect_to @user, notice: 'Successfully signed up.' }
         format.json { render :show, status: :created, location: @user }
       else
