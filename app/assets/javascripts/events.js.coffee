@@ -3,6 +3,12 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
+jjQuery ->
+  $('#event_event_date').datepicker({
+    dateFormat: 'mm-dd-yy'
+    minDate: +1 });
+
+
+
 jQuery ->
-  $('#event_event_date').datepicker
-    dateFormat: 'yy-mm-dd'
+  $('#event_time').timepicker({ 'step': 5 });
