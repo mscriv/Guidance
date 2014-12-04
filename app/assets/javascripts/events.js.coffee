@@ -11,4 +11,4 @@ jQuery ->
 
 
 jQuery ->
-  $('#event_time').timepicker({ 'step': 5 });
+  $('#event_event_time').timepicker({ 'step': 5 });
