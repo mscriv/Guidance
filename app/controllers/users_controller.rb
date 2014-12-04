@@ -25,10 +25,11 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    end
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        User.mailer.signup_confirmation(@user).deliver
+        format.html { redirect_to @user, notice: 'Successfully signed up.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
