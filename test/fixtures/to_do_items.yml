@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: to_do_items
+#
+#  id            :integer          not null, primary key
+#  item          :string(255)
+#  to_do_list_id :integer
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  to_do_list_id: 
+
+two:
+  item: MyString
+  to_do_list_id: 

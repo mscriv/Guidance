@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :to_do_items
+
+  resources :to_do_lists
+
+  resources :counselors
+
   ActiveAdmin.routes(self)
   resources :users
 
