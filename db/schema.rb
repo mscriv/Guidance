@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20141203214132) do
   create_table "events", force: true do |t|
     t.string   "title"
     t.string   "location"
-    t.string   "event_date"
-    t.string   "starts_at"
-    t.string   "ends_at"
+    t.date     "event_date"
+    t.time     "starts_at"
+    t.time     "ends_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
