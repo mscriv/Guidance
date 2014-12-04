@@ -6,8 +6,8 @@
 #  title      :string(255)
 #  location   :string(255)
 #  event_date :date
-#  starts_at  :string(255)
-#  ends_at    :string(255)
+#  starts_at  :time
+#  ends_at    :time
 #  created_at :datetime
 #  updated_at :datetime
 #
