@@ -1,15 +1,33 @@
 class ItemsController < ApplicationController
+  before_action :find_list
+
   def index
-    @list = List.find(params[:list_id])
   end
 
   def new
-    @list = List.find(params[:list_id])
     @item = @list.items.new
   end
 
+  def edit
+    @item = @list.items.find(params[:id])
+  end
+
+  def url_options
+    { list_id: params[:list_id] }.merge(super)
+  end
+
+  def update
+    @item = @list.items.find(params[:id])
+    if @item.update_attributes(item_params)
+      flash[:success] = 'Saved List item'
+      redirect_to list_items_path
+    else
+      flash[:error] = 'Unable to save list item'
+      render action: :edit
+    end
+  end
+
   def create
-    @list = List.find(params[:list_id])
     @item = @list.items.new(item_params)
     if @item.save
       flash[:success] = 'Added new item'
@@ -21,6 +39,10 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def find_list
+    @list = List.find(params[:list_id])
+  end
 
   def item_params
     params[:item].permit(:name)

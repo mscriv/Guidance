@@ -2,8 +2,13 @@
 
 <ul class="items">
   <% @list.items.each do |item| %>
-  <li><%= item.name %></li>
+  <li>
+    <%= item.name %>
+    <%= link_to 'Edit Item', edit_list_item_path(item) %>
+  </li>
+
 	  <% end %>
 </ul>
 
 <%= link_to 'New Item', new_list_item_path %>
+<%= link_to 'Checklist', lists_path %>
