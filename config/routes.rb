@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'items/index'
 
-  resources :lists
+  resources :lists do
+  resources :items
+  end
 
   resources :counselors, :users, :events
 
