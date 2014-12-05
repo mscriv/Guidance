@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'items/index'
+
   resources :lists
 
   resources :counselors, :users, :events
