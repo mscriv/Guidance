@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School:</strong>
+  <%= @location.school %>
+</p>
+
+<p>
+  <strong>Test code:</strong>
+  <%= @location.test_code %>
+</p>
+
+<p>
+  <strong>School code:</strong>
+  <%= @location.school_code %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @location.test %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

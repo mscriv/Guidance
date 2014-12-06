@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141206144513) do
+ActiveRecord::Schema.define(version: 20141206160646) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -58,6 +58,26 @@ ActiveRecord::Schema.define(version: 20141206144513) do
 
   create_table "lists", force: true do |t|
     t.string   "month"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "school"
+    t.string   "test_code"
+    t.integer  "school_code"
+    t.integer  "test_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "locations", ["test_id"], name: "index_locations_on_test_id"
+
+  create_table "tests", force: true do |t|
+    t.string   "name"
+    t.date     "test_date"
+    t.date     "registration_deadline"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
