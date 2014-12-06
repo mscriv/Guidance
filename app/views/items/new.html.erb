@@ -1,20 +1,8 @@
+<h2> <%= @list.month %> - Add new Items</h2>
+
 <%= form_for [@list, @item] do |form| %>
-    <% if @item.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@item.errors.count, 'error') %> prohibited this item from being saved:</h2>
-
-          <ul>
-            <% @item.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-	<%= form.label :name %>
-	<%= form.text_field :name %>
-
-	<%= form.submit 'Save' %>
-   <% end %>
+    <%=  render partial: form%>
+<% end %>
 
 <%= link_to 'Back', list_items_path %>
 <%= link_to 'Checklist', lists_path %>

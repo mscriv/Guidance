@@ -5,6 +5,8 @@
   <li>
     <%= item.name %>
     <%= link_to 'Edit Item', edit_list_item_path(item) %>
+    <%= link_to 'Delete Item', list_item_path(item), method: :delete, data: {confirm: 'Are you sure?'} %>
+
   </li>
 
 	  <% end %>

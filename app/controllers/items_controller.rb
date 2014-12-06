@@ -12,6 +12,15 @@ class ItemsController < ApplicationController
     @item = @list.items.find(params[:id])
   end
 
+  def destroy
+    @item = @list.items.find(params[:id])
+    if @item.destroy
+      flash[:success] = 'Item has been deleted.'
+    else
+      flash[:error] = 'Unable to delete the item'
+    end
+  end
+
   def url_options
     { list_id: params[:list_id] }.merge(super)
   end
