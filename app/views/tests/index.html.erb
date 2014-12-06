@@ -1,9 +1,18 @@
+<div class="container">
+  <%= form_tag search_tests_path, class: 'form' do %>
+      <%= text_field_tag "search_query", nil, placeholder: 'Search text' %>
+      <%= submit_tag "Search", class: 'radius button tiny' %>
+  <% end %>
+</div>
+
+
 <h1>Listing tests</h1>
+<%= paginate @tests %>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= link_to 'Name', sort: 'name'%></th>
       <th>Test date</th>
       <th>Registration deadline</th>
       <th>Description</th>

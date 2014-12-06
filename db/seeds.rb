@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+require 'faker'
+
+100.times do |t|
+  test = Test.create!(name: Faker::Name.name, registration_deadline: Faker::Date.forward(23), test_date: Faker::Date.forward(23))
+
+end
