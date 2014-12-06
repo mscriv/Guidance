@@ -3,7 +3,7 @@
 <ul class="items">
   <% @list.items.each do |item| %>
   <li>
-    <%= item.name %>
+    <input type="checkbox"><%= item.name %>
     <%= link_to 'Edit Item', edit_list_item_path(item) %>
     <%= link_to 'Delete Item', list_item_path(item), method: :delete, data: {confirm: 'Are you sure?'} %>
 

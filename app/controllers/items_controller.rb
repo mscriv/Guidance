@@ -21,6 +21,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def complete
+    @item = @list.items.find(params[:id])
+    @item.update_attribute(completed_at, Time.now)
+    redirect_to list_items_path notice: 'Item marked as complete'
+  end
+
   def url_options
     { list_id: params[:list_id] }.merge(super)
   end
@@ -54,7 +60,7 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params[:item].permit(:name)
+    params[:item].permit(:name, :completed_at)
   end
 
 end
