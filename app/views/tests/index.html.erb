@@ -26,6 +26,7 @@
         <td><%= test.test_date %></td>
         <td><%= test.registration_deadline %></td>
         <td><%= test.description %></td>
+        <td><%= link_to 'View Locations', test_locations_path(test) %></td>
         <td><%= link_to 'Show', test %></td>
         <td><%= link_to 'Edit', edit_test_path(test) %></td>
         <td><%= link_to 'Destroy', test, method: :delete, data: { confirm: 'Are you sure?' } %></td>

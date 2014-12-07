@@ -1,4 +1,10 @@
-<h1>Listing locations</h1>
+
+  <h4><%= @test.name %></h4>
+  <h4>Test date:<%= @test.test_date %></h4>
+
+  <h4>Registration Deadline:<%= @test.registration_deadline %></h4>
+
+  <h5>Listing locations</h5>
 
 <table>
   <thead>
@@ -12,15 +18,12 @@
   </thead>
 
   <tbody>
-    <% @locations.each do |location| %>
+    <% @test.locations.each do |location| %>
       <tr>
         <td><%= location.school %></td>
         <td><%= location.test_code %></td>
         <td><%= location.school_code %></td>
-        <td><%= location.test %></td>
-        <td><%= link_to 'Show', location %></td>
-        <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= location.test.name %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +31,7 @@
 
 <br>
 
-<%= link_to 'New Location', new_location_path %>
+
+  <%= link_to 'New Location', new_test_location_path %>
+  <%= link_to 'Back to Tests', tests_path %>
+

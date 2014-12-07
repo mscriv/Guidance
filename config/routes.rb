@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
 
-  resources :locations
 
   resources :tests do
     collection do
       post 'search', to: 'tests#search'
     end
+    resources :locations
   end
 
   resources :lists do
