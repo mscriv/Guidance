@@ -1,0 +1,25 @@
+<%= form_for(@diploma) do |f| %>
+  <% if @diploma.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diploma.errors.count, "error") %> prohibited this diploma from being saved:</h2>
+
+      <ul>
+      <% @diploma.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_id %><br>
+    <%= f.text_field :requirement_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

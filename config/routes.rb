@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
 
 
+  resources :subjects
+
+  resources :diplomas
+
+  resources :requirements
+
   resources :tests do
     collection do
       post 'search', to: 'tests#search'
