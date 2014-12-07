@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :requirements do
+    resources :diplomas
+  end
 
-
+  resources :diplomas do
   resources :subjects
+end
 
-  resources :diplomas
-
-  resources :requirements
 
   resources :tests do
     collection do
