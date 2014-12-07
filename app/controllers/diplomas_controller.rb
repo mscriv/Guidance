@@ -8,13 +8,13 @@ class DiplomasController < InheritedResources::Base
 
   def new
     @requirement = Requirement.find(params[:requirement_id])
-    @diploma = @requirement.diploma.new
+    @diploma = @requirement.diplomas.new
 
   end
 
   def create
     @requirement = Requirement.find(params[:requirement_id])
-    @diploma = @requirement.diploma.new(diploma_params)
+    @diploma = @requirement.diplomas.new(diploma_params)
 
     respond_to do |format|
       if @diploma.save

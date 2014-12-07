@@ -10,13 +10,11 @@
   </thead>
 
   <tbody>
-    <% @diplomas.each do |diploma| %>
+    <% @requirement.diplomas.each do |diploma| %>
       <tr>
         <td><%= diploma.name %></td>
-        <td><%= diploma.requirement %></td>
-        <td><%= link_to 'Show', diploma %></td>
-        <td><%= link_to 'Edit', edit_diploma_path(diploma) %></td>
-        <td><%= link_to 'Destroy', diploma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= diploma.requirement.year %></td>
+        <td><%= link_to 'View Subjects', diploma_subjects_path(diploma) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +22,5 @@
 
 <br>
 
-<%= link_to 'New Diploma', new_diploma_path %>
+<%= link_to 'New Diploma', new_requirement_diploma_path %>
+<%= link_to 'Back to Requirements', requirements_path %>
