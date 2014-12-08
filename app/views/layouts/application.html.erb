@@ -34,36 +34,23 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Graduation Requirements <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="./default/">Default</a></li>
+              <li><%= link_to '2011-2012', diplomas_path %></a></li>
               <li class="divider"></li>
-              <li><a href="./cerulean/">Cerulean</a></li>
-              <li><a href="./cosmo/">Cosmo</a></li>
-              <li><a href="./cyborg/">Cyborg</a></li>
-              <li><a href="./darkly/">Darkly</a></li>
-              <li><a href="./flatly/">Flatly</a></li>
-              <li><a href="./journal/">Journal</a></li>
-              <li><a href="./lumen/">Lumen</a></li>
-              <li><a href="./paper/">Paper</a></li>
-              <li><a href="./readable/">Readable</a></li>
-              <li><a href="./sandstone/">Sandstone</a></li>
-              <li><a href="./simplex/">Simplex</a></li>
-              <li><a href="./slate/">Slate</a></li>
-              <li><a href="./spacelab/">Spacelab</a></li>
-              <li><a href="./superhero/">Superhero</a></li>
-              <li><a href="./united/">United</a></li>
-              <li><a href="./yeti/">Yeti</a></li>
+              <li><a href="./cerulean/">2012-2013</a></li>
+              <li><a href="./cosmo/">2013-2014</a></li>
             </ul>
           </li>
           <li>
-            <a href="./help/">Testing</a>
+          <li><%= link_to 'Testing', tests_path %></li>
           </li>
           <li>
-            <a href="http://news.bootswatch.com">Events</a>
+            <%= link_to 'Events', events_path %>
           </li>
+          <li><%= link_to 'Senior Checklist', lists_path %></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://builtwithbootstrap.com/" target="_blank">Counselors</a></li>
+          <li><%= link_to 'Counselors', counselors_path %></li>
           <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">About</a></li>
         </ul>
 
