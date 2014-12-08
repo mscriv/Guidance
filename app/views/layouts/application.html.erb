@@ -17,47 +17,68 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </head>
 
-  <div class="navbar navbar-default">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Home</a>
-      <a class="navbar-brand" href="#">About</a>
-      <a class="navbar-brand" href="#">Counselors</a>
-      <a class="navbar-brand" href="#">Graduation Requirements</a>
-      <a class="navbar-brand" href="#">Events</a>
-      <a class="navbar-brand" href="#">Testing</a>
-    </div>
-    <div class="navbar-collapse collapse navbar-responsive-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign in</a></li>
-
-        <li><div class="btn-toolbar">
-          <div class="btn-group">
-            <div class="btn-group">
 
 
-              <ul class="dropdown-menu">
-              </ul>
-            </div>
-          </div>
-        </div></li>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="./" class="navbar-brand">Ed Templater</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Graduation Requirements <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="themes">
+              <li><a href="./default/">Default</a></li>
+              <li class="divider"></li>
+              <li><a href="./cerulean/">Cerulean</a></li>
+              <li><a href="./cosmo/">Cosmo</a></li>
+              <li><a href="./cyborg/">Cyborg</a></li>
+              <li><a href="./darkly/">Darkly</a></li>
+              <li><a href="./flatly/">Flatly</a></li>
+              <li><a href="./journal/">Journal</a></li>
+              <li><a href="./lumen/">Lumen</a></li>
+              <li><a href="./paper/">Paper</a></li>
+              <li><a href="./readable/">Readable</a></li>
+              <li><a href="./sandstone/">Sandstone</a></li>
+              <li><a href="./simplex/">Simplex</a></li>
+              <li><a href="./slate/">Slate</a></li>
+              <li><a href="./spacelab/">Spacelab</a></li>
+              <li><a href="./superhero/">Superhero</a></li>
+              <li><a href="./united/">United</a></li>
+              <li><a href="./yeti/">Yeti</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./help/">Testing</a>
+          </li>
+          <li>
+            <a href="http://news.bootswatch.com">Events</a>
+          </li>
+        </ul>
 
-      </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://builtwithbootstrap.com/" target="_blank">Counselors</a></li>
+          <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">About</a></li>
+        </ul>
+
+      </div>
     </div>
   </div>
 
   <%= flash.each do |type, message| %>
-   <div class="alert flash <%= type %>">
+   <div class="alert flash" <%= type %>>
      <% message %>
    </div>
 
     <% end %>
 
-</header>
+
 <main role="main">
 <%= yield %>
 </main>
