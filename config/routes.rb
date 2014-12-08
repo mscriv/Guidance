@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'welcome/index'
+
   resources :schools
 
   resources :requirements do
@@ -29,6 +31,6 @@ end
 
   ActiveAdmin.routes(self)
 
-  root 'users#index'
+  root 'welcome#index'
 
 end

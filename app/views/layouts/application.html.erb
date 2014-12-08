@@ -7,14 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/yeti/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </head>
+
   <%= flash.each do |type, message| %>
    <div class="alert flash <%= type %>">
      <% message %>
    </div>
+
     <% end %>
 
-
+</header>
+<main role="main">
 <%= yield %>
-
+</main>
 </body>
 </html>
