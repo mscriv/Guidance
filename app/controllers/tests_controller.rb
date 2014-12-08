@@ -7,7 +7,7 @@ class TestsController < InheritedResources::Base
   end
 
   def index
-    @tests = Test.order(params[:sort]).page(params[:page]).per(5)
+    @tests = Test.order(params[:sort]).page(params[:page]).per(10)
   end
 
   private
