@@ -11,11 +11,13 @@
  * file per style scope.
 
  *= require jquery-ui
-   *= require_tree .
+    *= require_tree .
  *= require_self
  */
 
-
+header {
+    padding: 80px;
+}
 div.alert {
     border: 2px solid #aaa;
     padding: 10px;
