@@ -5,8 +5,16 @@
 
     <h3 id="H3_1"><%= list.month %></h3>
 
-    <h5><%= link_to 'View Items', list_items_path(list) %></h5>
+      <% list.items.each do |item| %>
+        <div class="row">
+          <div class="col-md-8">
+        <input type="checkbox"><%= item.name %>
+            </div>
+            </div>
+
+
     <% end %>
+<% end %>
 
 
 

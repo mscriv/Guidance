@@ -3,3 +3,4 @@ class List < ActiveRecord::Base
   validates :month, length: {minimum: 3}
 has_many :items
 end
+
