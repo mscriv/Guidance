@@ -34,6 +34,8 @@
 
 #events #month {
   margin: 0;
+  color: rgb(48, 133, 48);
+  font: normal normal bold normal 24px/normal Tahoma;
   padding-bottom: 10px;
   text-align: center;
   font-size: 22px;
@@ -48,3 +50,30 @@
   font-size: 11px;
   padding-left: 20px;
 }
+
+#H1_1 {
+  color: rgb(215, 145, 22);
+  height: 32px;
+  width: 980px;
+  perspective-origin: 490px 16px;
+  transform-origin: 490px 16px;
+  border: 0px none rgb(215, 145, 22);
+  font: normal normal bold normal 24px/normal 'Open Sans', 'Segoe UI', 'Lucida Grande', Verdana, sans-serif;
+  margin: 15.7798404693604px 0px;
+  outline: rgb(215, 145, 22) none 0px;
+}/*#H1_1*/
+
+#H2_1 {
+  border-collapse: collapse;
+  color: rgb(48, 133, 48);
+  height: 29px;
+  text-align: center;
+  white-space: nowrap;
+  width: 186.640625px;
+  perspective-origin: 93.3125px 14.5px;
+  transform-origin: 93.3125px 14.5px;
+  border: 0px none rgb(48, 133, 48);
+  font: normal normal bold normal 24px/normal Tahoma;
+  margin: 0px 0px 19.5481605529785px;
+  outline: rgb(48, 133, 48) none 0px;
+}/*#H2_1*/
