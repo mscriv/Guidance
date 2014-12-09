@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :find_list
 
   def index
+    @list = List.find(params[:list_id])
   end
 
   def new
