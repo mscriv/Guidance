@@ -1,4 +1,10 @@
 <h1> Graduation Requirements</h1>
+<h2>
+  <% @requirement.diplomas.each do |diploma| %>
+  <%= diploma.requirement.year %>
+</h2>
+
+  <% end %>
 
 <table>
   <thead>
@@ -23,10 +29,9 @@
       </table>
 
 <% diploma.subjects.each do |subject| %>
-            <h3>Subjects:</h3>
-            <p>Name: <%= subject.name %></p>
-            <p>Requisite: <%= subject.requisite %></p>
-
+            <ul>
+            <li>Subject: <%= subject.name %>    Requisite: <%= subject.requisite %></li>
+            </ul>
         <% end %>
 
   <% end %>
@@ -35,6 +40,6 @@
 
 
 
-
-<%= link_to 'New Diploma', new_requirement_diploma_path %>
+<br>
+  <br>
 <%= link_to 'Back to Requirements', requirements_path %>
