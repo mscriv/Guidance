@@ -10,6 +10,16 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+
+    section "Recent Events" do
+      table_for Event.all.limit(5) do
+        column :title do |event|
+          link_to event.title, [:admin, event]
+        end
+        column :location
+      end
+      strong { link_to "View All Events", admin_events_path }
+    end
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
