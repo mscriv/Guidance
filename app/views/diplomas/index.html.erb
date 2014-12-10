@@ -1,45 +1,38 @@
-<h1> Graduation Requirements</h1>
-<h2>
-  <% @requirement.diplomas.each do |diploma| %>
-  <%= diploma.requirement.year %>
-</h2>
-
-  <% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Diploma Name</th>
-      <th>Requirement Year</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @requirement.diplomas.each do |diploma| %>
-      <tr>
-        <td><%= diploma.name %></td>
-        <td><%= diploma.requirement.year %></td>
-        <td><%= diploma.requirement.description%></td>
-        </tr>
 
 
-      </tbody>
-      </table>
+<div class="row">
+  <div class="col-xs-4">
+    <h4> Subject</h4>
+  </div>
 
-<% diploma.subjects.each do |subject| %>
-            <ul>
-            <li>Subject: <%= subject.name %>    Requisite: <%= subject.requisite %></li>
-            </ul>
+
+  <div class="col-xs-4">
+    <h4> 24 Credit Standard Diploma</h4>
+  </div>
+
+
+
+  <div class="col-xs-4">
+    <h4> Scholar Designation In addition to Standard Diploma</h4>
+  </div>
+  </div>
+
+<div class="row">
+  <% Diploma.first.subjects.each do |subject| %>
+      <div class="col-xs-4">
+        <%= subject.name %>
+      </div>
+
+       <div class="col-xs-4">
+         <%= subject.requisite %>
+       </div>
+     <% end %>
+
+  <% Diploma.last.subjects.each do |subject| %>
+      <div class="col-xs-4">
+        <%= subject.requisite %>
+       </div>
         <% end %>
 
-  <% end %>
+</div>
 
-
-
-
-
-<br>
-  <br>
-<%= link_to 'Back to Requirements', requirements_path %>
