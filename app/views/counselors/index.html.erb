@@ -1,29 +1,24 @@
-<h1>Meet the Counselors</h1>
+<h1 class="text-center">Meet the Counselors</h1>
 
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Bio</th>
-      <th>Contact</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Contact</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @counselors.each do |counselor| %>
+  <% @counselors.each do |counselor| %>
       <tr>
         <td><%= counselor.name %></td>
         <td><%= counselor.bio %></td>
         <td><%= counselor.contact %></td>
-        <td><%= link_to 'Show', counselor %></td>
-        <td><%= link_to 'Edit', edit_counselor_path(counselor) %></td>
-        <td><%= link_to 'Destroy', counselor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Counselor', new_counselor_path %>
