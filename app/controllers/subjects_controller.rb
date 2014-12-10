@@ -7,13 +7,12 @@ class SubjectsController < InheritedResources::Base
 
   def new
     @diploma = Diploma.find(params[:diploma_id])
-    @subject = @diploma.subject.new
+    @subject = @diploma.subjects.new
 
   end
 
   def create
-    @diploma = Diploma.find(params[:diploma_id])
-    @subject = @diploma.subject.new(subject_params)
+    @subject = @diploma.subjects.new(subject_params)
 
     respond_to do |format|
       if @subject.save
