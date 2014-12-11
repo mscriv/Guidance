@@ -31,6 +31,6 @@ end
 
   ActiveAdmin.routes(self)
 
-  root 'welcome#index'
+  root 'schools#index'
 
 end

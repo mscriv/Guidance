@@ -8,5 +8,3 @@
 
 
 
-counselors = Counselor.create([{ name: 'Claudette Reid', bio: 'Department Head, A-D, AVID, UTA. Please feel free to contact me with any questions ', contact: 'Ext. 736'},
-             { name: 'Brian Riley', bio: ' E-M, IMPACT', contact: 'Ext. 730'}, { name: 'Stacy Bishop', bio: 'N-Z, Maritime', contact: 'Ext. 737'}])

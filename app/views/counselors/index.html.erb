@@ -5,16 +5,19 @@
 
 <% @counselors.each do |counselor| %>
       <div class="row">
-
+        <div class="col-md-4">
         <%= counselor.name %>
-      </div>
-      <br>
-      <div class="row">
-      <%= counselor.bio %>
-      </div>
-      <br>
-      <div class="row">
-      <%= counselor.contact %>
+
+        </div>
+
+    <div class="col-md-4">
+    <%= counselor.bio %>
+
+    </div>
+    <div class="col-md-4">
+    <%= counselor.contact %>
+
+    </div>
       </div>
       <br>
    <% end %>

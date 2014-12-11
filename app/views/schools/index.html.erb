@@ -1,29 +1,35 @@
-<h1>Listing schools</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guidance</title>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<header id="top" class="main-header">
+  <span class="title">Making Educator's Lives Easier</span>
+  <h3>Let's Get Started!</h3>
+</header>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Contact</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="primary-content t-border">
+  <p class="intro">
+    Take control of how you communicate with parents and teachers. Customize your schools home page. Track data with a custom dashboard.
+  </p>
+  <a class="callout" href="#more">Find out more</a>
 
-  <tbody>
-    <% @schools.each do |school| %>
-      <tr>
-        <td><%= school.name %></td>
-        <td><%= school.address %></td>
-        <td><%= school.contact %></td>
-        <td><%= link_to 'Show', school %></td>
-        <td><%= link_to 'Edit', edit_school_path(school) %></td>
-        <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="wildlife">
+    <h2>Click the links above to view some features</h2>
 
-<br>
+  </div><!-- End .wildlife -->
 
-<%= link_to 'New School', new_school_path %>
+  <a class="callout" href="#wildlife">See Example</a>
+</div><!-- End .primary-content -->
+
+
+</div><!-- End .secondary-content -->
+
+<footer class="main-footer">
+  <p>All rights reserved to <a href="#">Me</a>.</p>
+  <a href="#top">Back to top &raquo;</a>
+</footer>
+</body>
+</html>
