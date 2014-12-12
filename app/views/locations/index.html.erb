@@ -1,17 +1,15 @@
 
 
-<div class="container">
-  <h4><%= @test.name %></h4>
-  <h4>Test date:<%= @test.test_date %></h4>
+ <div class="text-center">
+  <h2><%= @test.name %></h2>
+  <h2>Test date: <%= @test.test_date %></h2>
 
-  <h4>Registration Deadline:<%= @test.registration_deadline %></h4>
-  </div>
+  <h3>Registration Deadline: <%= @test.registration_deadline %></h3>
 
-  <h5>Listing locations</h5>
-
-<table>
+</div>
+<table id="customers", class= "table table-striped">
   <thead>
-    <tr>
+    <tr class="alt">
       <th>School</th>
       <th>Test code</th>
       <th>School code</th>
