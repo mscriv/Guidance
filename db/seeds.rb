@@ -7,4 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+require 'faker'
+
+25.times do |test|
+  test = Test.create(test_date: Faker::Date.forward(23), registration_deadline: Faker::Date.forward(23))
+
+end
 
