@@ -1,10 +1,10 @@
 
 
 
-<h3 class= "text-center">School Year: <br><%= Requirement.first.year%></h3>
+<h2 class= "text-center">School Year: <br><%= Requirement.first.year%></h2>
 
 
-<h5 class= "text-center">(<%= Requirement.first.description %>)</h5>
+<h3 class= "text-center">(<%= Requirement.first.description %>)</h3>
 
 
 
@@ -14,35 +14,22 @@
   </div>
 
 
-  <div class="col-xs-4">
+  <div class="col-xs-8">
     <h4> 24 Credit Standard Diploma</h4>
   </div>
 
 
-
-  <div class="col-xs-4">
-    <h4> Scholar Designation In addition to Standard Diploma</h4>
-  </div>
-
-  </div>
-
+<div class="row">
   <% Diploma.first.subjects.each do |subject| %>
-    <div class="row">
-    <div class="col-xs-4">
-      <%= subject.name %>
+      <div class="col-xs-4">
+        <%= subject.name %>
       </div>
 
-       <div class="col-xs-4">
+       <div class="col-xs-8">
          <%= subject.requisite %>
        </div>
-     <% end %>
+  <% end %>
 
-  <% Diploma.last.subjects.each do |subject| %>
-      <div class="col-xs-4">
-        <%= subject.requisite %>
-       </div>
-    </div>
-    <br>
-<% end %>
+</div>
 
 
