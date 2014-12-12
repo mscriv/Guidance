@@ -1,15 +1,16 @@
 
 <h1 class="text-center">SAT/ACT Test Dates</h1>
 <%= paginate @tests %>
+<div>
+  <div>
 
-
-<table class="table table-striped table-bordered table-collapse">
+  <table id="customers", class= "table table-striped">
   <thead>
-    <tr>
-      <th id="TH_1"><%= link_to 'Test name', sort: 'name'%></th>
-      <th id="TH_1"><%= link_to 'Test date', sort: 'test_date'%></th>
-      <th id="TH_1"><%= link_to 'Registration deadline', sort: 'registration_deadline' %></th>
-      <th id="TH_1">Locations</th>
+    <tr class="alt">
+      <th><%= link_to 'Test name', sort: 'name'%></th>
+      <th><%= link_to 'Test date', sort: 'test_date'%></th>
+      <th><%= link_to 'Registration deadline', sort: 'registration_deadline' %></th>
+      <th>Locations</th>
     </tr>
   </thead>
 

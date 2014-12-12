@@ -1,21 +1,24 @@
-// Place all the styles related to the tests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-#TH_1 {
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
   border-collapse: collapse;
-  background-color: #48525c;
-  color: white;
-  height: 39px;
-  text-align: left;
-  vertical-align: top;
-  width: 300px;
-  perspective-origin: 40.5px 45px;
-  transform-origin: 40.5px 45px;
-  border: 1px solid rgb(194, 179, 154);
-  font: normal normal bold normal 17px/17px Arial, Helvetica, sans-serif;
-  outline: rgb(94, 69, 23) none 0px;
-  padding: 10px;
-}/*#TH_1*/
+}
 
+#customers td, #customers th {
+  font-size: 1em;
+  padding: 3px 7px 2px 7px;
+}
+
+#customers th {
+  font-size: 1.1em;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: dimgrey;
+  color: #ffffff;
+}
+
+#customers tr.alt td {
+  color: #000000;
+  background-color: #EAF2D3;
+}
