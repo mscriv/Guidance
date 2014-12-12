@@ -1,4 +1,4 @@
-<h1 id="H1_1">Events</h1>
+<h1 id="H1_1" xmlns="http://www.w3.org/1999/html">Events</h1>
 
 <div id="events">
   <h2 id="month">
@@ -11,7 +11,7 @@
       <% if @events_by_date[date] %>
           <ul>
             <% @events_by_date[date].each do |event| %>
-              <li><%= link_to event.title, event %></li>
+           <li><%= link_to event.title, event %></li>
             <% end %>
           </ul>
       <% end %>
