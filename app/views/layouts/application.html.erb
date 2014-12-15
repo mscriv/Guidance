@@ -34,16 +34,14 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Counselors <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
-            <li><%= link_to 'Sherryne Scriven', counselor_path(Counselor.first) %></li>
-              <li><%= link_to 'Claudette Reid', counselor_path(Counselor.second) %></li>
-              <li><%= link_to 'Brian Riley', counselor_path(Counselor.third) %></li>
-              <li><%= link_to 'Stacey Bishop', counselor_path(Counselor.fourth) %></li>
+              <li><%= link_to 'View All', counselors_path %></li>
+
             </ul>
 
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Graduation Requirements <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><%= link_to '2011-2012', requirement_diplomas_path(Requirement.first) %></a></li>
+              <li><%= link_to '2011-2012', requirement_diplomas_path %></a></li>
               <li><a href="./cerulean/">2012-2013</a></li>
               <li><a href="./cosmo/">2013-2014</a></li>
               <li class="divider"></li>
