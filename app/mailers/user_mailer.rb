@@ -8,3 +8,5 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Thank you for signing up')
   end
 end
+
+
